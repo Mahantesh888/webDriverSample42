@@ -8,12 +8,16 @@ public class GooglePageTest {
 	public static void main(String[] args) {
 		ChromeOptions option = new ChromeOptions();
 		option.setBrowserVersion("115");
+		// without launching chrome we can test/ run 
+		//option.addArguments("Headless");
 		WebDriver driver = new ChromeDriver(option);
+	    
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
 		System.out.print("page title..."+ driver.getTitle());
-	    driver.close();
-		
+	    System.out.println("page url" + driver.getCurrentUrl());
+		driver.navigate().back();
+		driver.navigate().refresh();
 
 	}
 
