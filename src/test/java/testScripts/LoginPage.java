@@ -18,6 +18,8 @@ public class LoginPage {
 			System.out.println("People working in San frans"+ele.getText());
 		}
 		///System.out.println(salary+ "Wagner salary");
+		
+		
 	}
 
 }
